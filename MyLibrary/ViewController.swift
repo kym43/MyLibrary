@@ -24,11 +24,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         let manager = HTTPManager.shared
         manager.getBookData { arrData in
             self.saveBookData(arr: arrData)
         }
-        //saveBookData()
     }
     
     func saveBookData(arr : NSMutableArray) {
