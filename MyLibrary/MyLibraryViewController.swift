@@ -16,6 +16,7 @@ class MyLibraryViewController : UIViewController, UICollectionViewDelegate, UICo
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var bWifi : Bool = true
     var arrBook = NSMutableArray()
+    var arrFav = NSArray() as! Array<Int>
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,7 @@ class MyLibraryViewController : UIViewController, UICollectionViewDelegate, UICo
                 self.collectionViewBook.reloadData()
             }
         }
+        arrFav = Array(repeating: 0, count: self.arrBook.count)
     }
     
     func getCoreData() -> Array<BookInfo>{
@@ -70,9 +72,23 @@ class MyLibraryViewController : UIViewController, UICollectionViewDelegate, UICo
             cell.imgBook.sd_setImage(with: URL(string: book.coverUrl!), placeholderImage: UIImage(named: "placeholder.png"))
             cell.lbTitle.text = book.title
         }
-        
+        cell.btnFavorite.tag = indexPath.row
+        cell.btnFavorite.addTarget(self, action: #selector(btnFavoriteClicked), for: .touchUpInside)
         
         return cell
+    }
+    
+    @objc func btnFavoriteClicked(sender: UIButton!) {
+        let btn: UIButton = sender
+        let index = btn.tag
+        if (arrFav[index] == 0) {
+            btn.setImage(UIImage(named: "favorite_enable"), for: .normal)
+            arrFav[index] = 1
+        }
+        else {
+            btn.setImage(UIImage(named: "favorite_disable"), for: .normal)
+            arrFav[btn.tag] = 0
+        }
     }
     
     

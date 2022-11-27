@@ -82,7 +82,7 @@
             </objects>
             <point key="canvasLocation" x="-1146" y="-32"/>
         </scene>
-        <!--Book Store-->
+        <!--My Library-->
         <scene sceneID="rlQ-b2-qFa">
             <objects>
                 <viewController storyboardIdentifier="libraryVC" id="Loa-ep-Iwa" customClass="MyLibraryViewController" customModule="MyLibrary" customModuleProvider="target" sceneMemberID="viewController">
@@ -164,7 +164,7 @@
                             <constraint firstItem="Liy-oz-JI0" firstAttribute="trailing" secondItem="800-fg-MLF" secondAttribute="trailing" id="jAD-vJ-bf5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Book Store" id="sfb-wD-fYV"/>
+                    <navigationItem key="navigationItem" title="My Library" id="sfb-wD-fYV"/>
                     <connections>
                         <outlet property="collectionViewBook" destination="800-fg-MLF" id="rmq-wy-Dtr"/>
                     </connections>
