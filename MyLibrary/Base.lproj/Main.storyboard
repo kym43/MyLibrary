@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HHU-oQ-hVG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -74,7 +75,7 @@
                     <connections>
                         <outlet property="lbVer" destination="MKQ-6Y-sGO" id="7d1-JX-hTy"/>
                         <outlet property="tbMenu" destination="y5T-Z3-vbv" id="XOp-3L-8c3"/>
-                        <segue destination="Loa-ep-Iwa" kind="show" identifier="toBookStorePage" id="F7q-qc-8NM"/>
+                        <segue destination="Loa-ep-Iwa" kind="show" identifier="toMyLibraryPage" id="F7q-qc-8NM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PTa-WU-gJz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -92,30 +93,30 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="800-fg-MLF">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6Dk-hc-t0B">
-                                    <size key="itemSize" width="128" height="128"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6Dk-hc-t0B">
+                                    <size key="itemSize" width="100" height="190"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="23" minY="20" maxX="11.5" maxY="30"/>
+                                    <inset key="sectionInset" minX="15" minY="20" maxX="15" maxY="30"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="bookCell" id="Tsi-uE-VaO" customClass="MyCollectionViewCell" customModule="MyLibrary" customModuleProvider="target">
-                                        <rect key="frame" x="23" y="20" width="100" height="190"/>
+                                        <rect key="frame" x="15" y="20" width="100" height="190"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="IjY-rz-fd1" customClass="MyCollectionViewCell" customModule="MyLibrary" customModuleProvider="target">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LIv-lX-oip">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="190"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uSU-75-fHt">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="145"/>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAN-2P-vpL">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAN-2P-vpL">
                                                     <rect key="frame" x="73" y="8.5" width="20" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="EAN-2P-vpL" secondAttribute="height" multiplier="20.3:17.7" id="Et6-I2-Ywt"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="favorite_disable"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="favorite_disable"/>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您已登入N號房:韓國史上最大宗" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bV-9W-Kck">
                                                     <rect key="frame" x="0.0" y="150" width="100" height="40"/>
@@ -128,16 +129,16 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="3bV-9W-Kck" firstAttribute="leading" secondItem="IjY-rz-fd1" secondAttribute="leading" id="5Zl-RT-RbD"/>
+                                                <constraint firstItem="3bV-9W-Kck" firstAttribute="leading" secondItem="LIv-lX-oip" secondAttribute="leading" id="5Zl-RT-RbD"/>
                                                 <constraint firstAttribute="trailing" secondItem="uSU-75-fHt" secondAttribute="trailing" id="Ece-ej-lUa"/>
-                                                <constraint firstItem="uSU-75-fHt" firstAttribute="top" secondItem="IjY-rz-fd1" secondAttribute="top" id="MV6-KS-547"/>
+                                                <constraint firstItem="uSU-75-fHt" firstAttribute="top" secondItem="LIv-lX-oip" secondAttribute="top" id="MV6-KS-547"/>
                                                 <constraint firstAttribute="trailing" secondItem="EAN-2P-vpL" secondAttribute="trailing" constant="6.8499999999999996" id="PWg-hi-ukB"/>
                                                 <constraint firstAttribute="trailing" secondItem="3bV-9W-Kck" secondAttribute="trailing" id="SbT-pC-XC9"/>
                                                 <constraint firstAttribute="bottom" secondItem="3bV-9W-Kck" secondAttribute="bottom" id="Sf1-nP-JRB"/>
-                                                <constraint firstItem="uSU-75-fHt" firstAttribute="leading" secondItem="IjY-rz-fd1" secondAttribute="leading" id="bKl-jz-dck"/>
-                                                <constraint firstItem="EAN-2P-vpL" firstAttribute="leading" secondItem="IjY-rz-fd1" secondAttribute="leading" constant="72.849999999999994" id="f7p-X6-Qoh"/>
+                                                <constraint firstItem="uSU-75-fHt" firstAttribute="leading" secondItem="LIv-lX-oip" secondAttribute="leading" id="bKl-jz-dck"/>
+                                                <constraint firstItem="EAN-2P-vpL" firstAttribute="leading" secondItem="LIv-lX-oip" secondAttribute="leading" constant="72.849999999999994" id="f7p-X6-Qoh"/>
                                                 <constraint firstItem="3bV-9W-Kck" firstAttribute="top" secondItem="uSU-75-fHt" secondAttribute="bottom" constant="5" id="heu-di-TRg"/>
-                                                <constraint firstItem="EAN-2P-vpL" firstAttribute="top" secondItem="IjY-rz-fd1" secondAttribute="top" constant="8.5999999999999996" id="w7H-od-7YM"/>
+                                                <constraint firstItem="EAN-2P-vpL" firstAttribute="top" secondItem="LIv-lX-oip" secondAttribute="top" constant="8.5999999999999996" id="w7H-od-7YM"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="100" height="190"/>

@@ -23,6 +23,9 @@
 		02E1B01829309B210028D69A /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E1B01529309B210028D69A /* MyCollectionViewCell.swift */; };
 		02E1B01A29309B310028D69A /* HTTPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E1B01929309B310028D69A /* HTTPManager.swift */; };
 		02E1B01C29309CA50028D69A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02E1B01B29309CA50028D69A /* GoogleService-Info.plist */; };
+		02E1B024293111E70028D69A /* BookInfo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E1B022293111E70028D69A /* BookInfo+CoreDataClass.swift */; };
+		02E1B025293111E70028D69A /* BookInfo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E1B023293111E70028D69A /* BookInfo+CoreDataProperties.swift */; };
+		C7BBB0F03C8BF1CBBEAB73CF /* Pods_MyLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2469EE4C973B2C29ABA3A2 /* Pods_MyLibrary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,11 @@
 		02E1B01529309B210028D69A /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		02E1B01929309B310028D69A /* HTTPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPManager.swift; sourceTree = "<group>"; };
 		02E1B01B29309CA50028D69A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		02E1B022293111E70028D69A /* BookInfo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "BookInfo+CoreDataClass.swift"; path = "MyLibrary/BookInfo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		02E1B023293111E70028D69A /* BookInfo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "BookInfo+CoreDataProperties.swift"; path = "MyLibrary/BookInfo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		10A649AD4B1627786364600E /* Pods-MyLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLibrary.release.xcconfig"; path = "Target Support Files/Pods-MyLibrary/Pods-MyLibrary.release.xcconfig"; sourceTree = "<group>"; };
+		5C2469EE4C973B2C29ABA3A2 /* Pods_MyLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC56FF5C082B475FF2F8A970 /* Pods-MyLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLibrary.debug.xcconfig"; path = "Target Support Files/Pods-MyLibrary/Pods-MyLibrary.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,7 @@
 				02E1B01129309A940028D69A /* FirebasePerformance in Frameworks */,
 				02E1B00929309A940028D69A /* FirebaseAnalytics in Frameworks */,
 				02E1B00B29309A940028D69A /* FirebaseAuth in Frameworks */,
+				C7BBB0F03C8BF1CBBEAB73CF /* Pods_MyLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,8 +69,12 @@
 		02E1AFE4293099F80028D69A = {
 			isa = PBXGroup;
 			children = (
+				02E1B022293111E70028D69A /* BookInfo+CoreDataClass.swift */,
+				02E1B023293111E70028D69A /* BookInfo+CoreDataProperties.swift */,
 				02E1AFEF293099F80028D69A /* MyLibrary */,
 				02E1AFEE293099F80028D69A /* Products */,
+				EAE829E1834123ADDD5315D9 /* Pods */,
+				610876264BDA0EAF12F5C96E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +105,23 @@
 			path = MyLibrary;
 			sourceTree = "<group>";
 		};
+		610876264BDA0EAF12F5C96E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C2469EE4C973B2C29ABA3A2 /* Pods_MyLibrary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EAE829E1834123ADDD5315D9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC56FF5C082B475FF2F8A970 /* Pods-MyLibrary.debug.xcconfig */,
+				10A649AD4B1627786364600E /* Pods-MyLibrary.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,10 +129,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 02E1B004293099F80028D69A /* Build configuration list for PBXNativeTarget "MyLibrary" */;
 			buildPhases = (
+				9847EAA53E4AD2478B2CEC18 /* [CP] Check Pods Manifest.lock */,
 				02E1AFE9293099F80028D69A /* Sources */,
 				02E1AFEA293099F80028D69A /* Frameworks */,
 				02E1AFEB293099F80028D69A /* Resources */,
 				02E1B01D293108970028D69A /* ShellScript */,
+				73F385F609C9C3C9ABBC576E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -190,6 +222,45 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
 		};
+		73F385F609C9C3C9ABBC576E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyLibrary/Pods-MyLibrary-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyLibrary/Pods-MyLibrary-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyLibrary/Pods-MyLibrary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9847EAA53E4AD2478B2CEC18 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyLibrary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -197,8 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02E1B025293111E70028D69A /* BookInfo+CoreDataProperties.swift in Sources */,
 				02E1B01729309B210028D69A /* MyLibraryViewController.swift in Sources */,
 				02E1B01829309B210028D69A /* MyCollectionViewCell.swift in Sources */,
+				02E1B024293111E70028D69A /* BookInfo+CoreDataClass.swift in Sources */,
 				02E1AFF5293099F80028D69A /* ViewController.swift in Sources */,
 				02E1AFFB293099F80028D69A /* MyLibrary.xcdatamodeld in Sources */,
 				02E1AFF1293099F80028D69A /* AppDelegate.swift in Sources */,
@@ -345,6 +418,7 @@
 		};
 		02E1B005293099F80028D69A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC56FF5C082B475FF2F8A970 /* Pods-MyLibrary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -359,6 +433,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -368,12 +443,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		02E1B006293099F80028D69A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10A649AD4B1627786364600E /* Pods-MyLibrary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -388,6 +464,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -397,7 +474,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

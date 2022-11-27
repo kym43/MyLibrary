@@ -1,6 +1,6 @@
 //
 //  MyCollectionViewCell.swift
-//  BookStore
+//  MyLibrary
 //
 //  Created by Ken Tai on 2022/11/24.
 //
