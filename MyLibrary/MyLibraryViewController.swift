@@ -37,6 +37,10 @@ class MyLibraryViewController : UIViewController, UICollectionViewDelegate, UICo
                 self.collectionViewBook.reloadData()
             }
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         arrFav = Array(repeating: 0, count: self.arrBook.count)
     }
     
